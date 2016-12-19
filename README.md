@@ -3,7 +3,7 @@
 Test automation using python3 and Sublime Text
 
 ## Generate tests
-Run `tools/gentests.py` and insert your **problem_name**, then copy-paste sample tests as is (only codeforces format is supported so far).
+Run `tools/gentests.py` and insert your **problem_name**, then copy-paste sample tests as is (only codeforces format is supported so far). Press `Ctrl+D` after you paste everything you wanted.
 
 The tests will be added as `tests/$problem_name/(input|ans)[1-n].txt`. Also, the last test will be copied as a couple of `tests/$problem_name/(input|ans)_custom[1-n].txt` tests. It is done to make custom test creation easier.
 
