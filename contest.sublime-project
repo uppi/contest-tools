@@ -1,0 +1,29 @@
+{
+	"build_systems":
+	[
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Build and run c++ tests",
+			"selector": "source.c++",
+			"shell_cmd": "g++ \"$file\" -std=c++11 && $folder/tools/run_tests.py ./a.out $file_path/tests/$file_base_name"
+		},
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Run python tests",
+			"selector": "source.python",
+			"shell_cmd": "$folder/tools/run_tests.py $file $file_path/tests/$file_base_name"
+		},
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "\"/usr/local/bin/python\" -u \"$file\""
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	]
+}
